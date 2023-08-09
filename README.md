@@ -14,7 +14,7 @@
 
 <img src="https://github.com/AlexeevLeonid/TemperatureChartDrawer/assets/79642783/b973e37d-4379-44bd-bc5a-23c00a0db123" width="600">
 
-Страница данных
+Страница данных (скачки - приложение выключалось, и не записывало данные)
 
 <img src="https://user-images.githubusercontent.com/79642783/231137088-f5ab9273-cd5a-445e-b944-70a42db22636.png" width="600">
 
