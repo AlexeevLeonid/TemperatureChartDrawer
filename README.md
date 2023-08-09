@@ -8,13 +8,13 @@
 
 На главной странице присутствует ссылка список источников: название, сайт, теги, обрамляющие собираемое значение, период, кнопки для просмотра графика и для удаления источника
 
-<img src="https://github.com/AlexeevLeonid/TemperatureChartDrawer/assets/79642783/4b4b95fc-c22e-4b54-a4d7-46fdbc626c97" width="600">
+<img src="https://user-images.githubusercontent.com/79642783/231136842-ca3c7dd9-0a79-44b9-8ee4-5f0929683419.png" width="600">
 
 Страница формы добавления нового источника
 
-<img src="https://github.com/AlexeevLeonid/TemperatureChartDrawer/assets/79642783/ce9157ed-bba9-46c8-b73b-d065b9cb763e" width="600">
+<img src="https://github.com/AlexeevLeonid/TemperatureChartDrawer/assets/79642783/b973e37d-4379-44bd-bc5a-23c00a0db123" width="600">
 
 Страница данных
 
-<img src="https://github.com/AlexeevLeonid/TemperatureChartDrawer/assets/79642783/1251b031-ede6-4373-becf-2ba8e9cb15e2" width="600">
+<img src="https://user-images.githubusercontent.com/79642783/231137088-f5ab9273-cd5a-445e-b944-70a42db22636.png" width="600">
 
