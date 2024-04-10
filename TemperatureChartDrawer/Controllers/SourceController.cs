@@ -1,47 +1,76 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using TemperatureChartDrawer.src.Database.Interfaces;
-using TemperatureChartDrawer.src.Sourse;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using TempArAn.Application.Records.Requests;
+using TempArAn.Application.Source.Requests;
+using TempArAn.Domain.Requests;
 
-namespace TemperatureChartDrawer.Controllers
+namespace TempAnAr.Controllers
 {
     [ApiController]
-    [Route("source")]
-    public class SourceController<TSource> : ControllerBase
-        where TSource : SourceBase
+    [Route("api/source")]
+    [Authorize]
+    public class SourceController : BaseController
     {
-        private readonly ILogger<SourceController<TSource>> _logger;
-        private readonly IRepository<TSource> _rep;
 
-        public SourceController(ILogger<SourceController<TSource>> logger, IRepository<TSource> rep)
+        [HttpGet("{id}")]
+        [AllowAnonymous]
+        public async Task<IActionResult> GetSource(Guid id)
         {
-            _logger = logger;
-            _rep = rep;
+            var query = new GetSourceQuery(id, AuthUser);
+            return Ok(await Mediator.Send(query));
         }
 
-        [HttpGet("{guid}")]
-        public async Task<TSource> GetSource(Guid guid)
+        [HttpGet("records/{id}")]
+        public async Task<IActionResult> GetRecordsFromSource(Guid id)
         {
-            return await _rep.GetSourse(guid);
+            var query = new GetRecordsFromSourceQuery(id, AuthUser);
+            return Ok(await Mediator.Send(query));
+        }
+
+        [HttpGet("data/{id}")]
+        public async Task<IActionResult> GetDataFromSource(Guid id)
+        {
+            var query = new GetDataForLastMonthQuery(id, AuthUser);
+            return Ok(await Mediator.Send(query));
+        }
+
+
+        [HttpGet("data/{id}/months")]
+        public async Task<IActionResult> GetDataForMonthFromSource(Guid id)
+        {
+            var query = new GetAllDataQuery(id, AuthUser);
+            return Ok(await Mediator.Send(query));
+        }
+
+        [HttpGet("errors/{id}")]
+        public async Task<IActionResult> GetErrorFromSource(Guid id)
+        {
+            var query = new GetErrorsFromSourceQuery(id, AuthUser);
+            return Ok(await Mediator.Send(query));
         }
 
         [HttpGet("")]
-        public async Task<List<TSource>> GetSources()
+        [AllowAnonymous]
+        public async Task<IActionResult> GetSources()
         {
-            return await _rep.GetSourses();
+            GetSourcesQuery query;
+            if (User.Identity != null && !User.Identity.IsAuthenticated) query = new GetSourcesQuery(null);
+            else query = new GetSourcesQuery(AuthUser);
+            return Ok(await Mediator.Send(query));
         }
 
         [HttpPost("")]
-        public async Task PostSource([FromBody] TSource source)
+        public async Task<IActionResult> PostSource([FromBody] CreateHtmlSourceDetails details)
         {
-            await _rep.PostSourse(source);
-            _logger.Log(LogLevel.Information, $"post source {source.Id}");
+            var command = new CreateHTMLSourceCommand(details, AuthUser);
+            return Ok(await Mediator.Send(command));
         }
 
         [HttpDelete("{id}")]
-        public async Task DeleteSource(Guid id)
+        public async Task<IActionResult> DeleteSource(Guid id)
         {
-            await _rep.DeleteSourse(id);
-            _logger.Log(LogLevel.Information, $"delete source {id}");
+            var request = new DeleteSourceCommand(id, AuthUser);
+            return Ok(await Mediator.Send(request));
         }
     }
 }

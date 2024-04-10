@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33627.172
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TempAnAr", "TemperatureChartDrawer\TempAnAr.csproj", "{ABC11179-153A-48A6-9BBE-E9952406E3D9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6C923FE0-FDB5-4931-AD61-E203E74F1AEB} = {6C923FE0-FDB5-4931-AD61-E203E74F1AEB}
+		{CE69299B-BBF1-457D-AFA8-8111C110A4F6} = {CE69299B-BBF1-457D-AFA8-8111C110A4F6}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TempArAn.Tests", "TestProject1\TempArAn.Tests.csproj", "{17FC2571-A335-48E3-946D-FFD3EE04B866}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TempArAn.Domain", "Application.Domain\TempArAn.Domain.csproj", "{6C923FE0-FDB5-4931-AD61-E203E74F1AEB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TempArAn.Application", "TempArAn.Application\TempArAn.Application.csproj", "{4D576955-B21E-461E-9FD5-E2FBC1E2C653}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TempArAn.Services", "TempArAn.Services\TempArAn.Services.csproj", "{75021871-74F2-40E0-9C61-D8727FBCB883}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TempAnAr.Persistence", "TempAnAr.Persistence\TempAnAr.Persistence.csproj", "{CE69299B-BBF1-457D-AFA8-8111C110A4F6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ABC11179-153A-48A6-9BBE-E9952406E3D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABC11179-153A-48A6-9BBE-E9952406E3D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABC11179-153A-48A6-9BBE-E9952406E3D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABC11179-153A-48A6-9BBE-E9952406E3D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17FC2571-A335-48E3-946D-FFD3EE04B866}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17FC2571-A335-48E3-946D-FFD3EE04B866}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17FC2571-A335-48E3-946D-FFD3EE04B866}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17FC2571-A335-48E3-946D-FFD3EE04B866}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C923FE0-FDB5-4931-AD61-E203E74F1AEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C923FE0-FDB5-4931-AD61-E203E74F1AEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C923FE0-FDB5-4931-AD61-E203E74F1AEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C923FE0-FDB5-4931-AD61-E203E74F1AEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D576955-B21E-461E-9FD5-E2FBC1E2C653}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D576955-B21E-461E-9FD5-E2FBC1E2C653}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D576955-B21E-461E-9FD5-E2FBC1E2C653}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D576955-B21E-461E-9FD5-E2FBC1E2C653}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75021871-74F2-40E0-9C61-D8727FBCB883}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75021871-74F2-40E0-9C61-D8727FBCB883}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75021871-74F2-40E0-9C61-D8727FBCB883}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75021871-74F2-40E0-9C61-D8727FBCB883}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE69299B-BBF1-457D-AFA8-8111C110A4F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE69299B-BBF1-457D-AFA8-8111C110A4F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE69299B-BBF1-457D-AFA8-8111C110A4F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE69299B-BBF1-457D-AFA8-8111C110A4F6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1E016877-49CC-4256-B733-25459472CD3F}
+	EndGlobalSection
+EndGlobal
